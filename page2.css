@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f2ef;
+}
+
+.header {
+    justify-content: space-between;
+    background: #f3dbdb;
+    color: #ce4662;
+    padding: 10px;
+}
+
+.container {
+    background-color: #afc389;
+    text-align: center;
+    padding: 20px;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6347; /* Цвет фона */
+    margin: 10px auto; /* Центрирование по горизонтали */
+}
+
+.container-2 {
+    background-color: #87ceeb;
+    height: 400px; /* Задаем высоту для вертикального центрирования */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #ff4500; /* Цвет фона */
+}
+
+.container-3 {
+    background-color: #ffe4e1;
+    display: flex;
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
+    justify-content: space-around; /* Равномерное распределение */
+    padding: 10px;
+}
+
+.block-3 {
+    width: 200px;
+    height: 200px;
+    background-color: #add8e6; /* Цвет фона */
+    margin: 10px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background-image: url('img/p6.jpg'); /* Замените на путь к изображению кота */
+    background-size: cover;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation {
+    margin-top: 20px;
+}
+.site-navigation {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, 30%);
+    margin-left: 265px;
+}
+.site-navigation-item {
+    margin-right: 10px;
+}
+.site-navigation-item a {
+    font-size: 24px;
+    color: #b34747;
+}
+.site-navigation-item a.active {
+    font-weight: bold;
+}
+
+
+.item {
+    background: #ffffff;
+    border: solid;
+    border-radius: 5%;
+}
+
+
+.footer {
+    background: #ce4662;
+    background-image: url(img/gif.gif);
+    background-repeat: repeat-x;
+    background-size: 11%;
+    color: #ce4662;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    background-color: #ffb8b8;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a {
+    color: #ce4662;
+    text-decoration: none;
+}
+
+.containerr {
+    position: relative;
+    width: 300px; /* Ширина контейнера */
+    height: 300px; /* Высота контейнера */
+    border: 1px solid black; /* Граница контейнера */
+}
+
+.box {
+    position: absolute;
+    width: 100px; /* Ширина квадратов */
+    height: 100px; /* Высота квадратов */
+}
+
+.red {
+    background-color: red;
+    top: 60px; /* Позиция сверху */
+    left: 60px; /* Позиция слева */
+}
+
+.blue {
+    background-color: blue;
+    top: 100px; /* Смещение сверху */
+    left: 100px; /* Смещение слева */
+}
+
+.green {
+    background-color: green;
+    bottom: 50px; /* Позиция снизу */
+    left: 150px; /* Позиция слева */
+}

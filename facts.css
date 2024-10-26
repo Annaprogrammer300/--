@@ -1,0 +1,142 @@
+body {
+background: #f3f2ef;
+}
+
+.push {
+list-style: none;
+font-family: "Lucida Sans";
+
+}
+.push li {
+position: relative;
+padding: 20px 0 20px 40px;
+font-variant:normal;
+font-weight: bold;
+cursor: pointer;
+font-size: 30px;
+}
+.push li:before {
+position: absolute;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: #4F5151;
+content: "";
+left: 0;
+transition: .3s ease-in-out;
+top: 27px;
+}
+.push li:after {
+position: absolute;
+border-left: 1px dotted #4F5151;
+width: 1px;
+bottom: -12px;
+content: "";
+left: 3px;
+top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
+.push li:last-child:after {content: none;}
+
+
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.navigation {
+margin-top: 20px;
+}
+.site-navigation {
+display: grid;
+justify-content: space-between;
+grid-template-columns: repeat(auto-fit, 30%);
+margin-left: 265px;
+}
+.site-navigation-item {
+margin-right: 10px;
+}
+.site-navigation-item a {
+font-size: 24px;
+color: #b34747;
+}
+.site-navigation-item a.active {
+font-weight: bold;
+}
+
+
+.content{
+align-items: center;
+height: auto;
+width: 80%;
+margin: 2% 13%;
+display: grid;
+grid-template-columns: repeat(auto-fit, 30%);
+grid-gap: 1%;
+row-gap: 3%;
+
+}
+
+
+.item {
+background: #ffffff;
+border: solid;
+border-radius: 5%;
+
+}
+
+.facts {
+
+height: 62vh;
+grid-column: span 2;
+background: #afc389;
+border-color: rgb(2, 2, 2);
+}
+
+.foto{
+  height: 62vh; 
+  object-fit: cover; 
+  object-position: bottom;
+background-image: url(img/foto.jpg); 
+background-size: cover;
+border: none;
+}
+
+.header {
+background: #f3dbdb;
+color: #ce4662;
+}
+
+.footer {
+background: #ce4662;
+background-image: url(img/gif.gif);
+background-repeat: repeat-x;
+background-size: 11%;
+color: #ce4662;
+}
+
+h1{
+text-align: center;
+font-size: 35px;
+margin: 0;
+font-weight: 700;
+}
+
+p{
+background-color: #ffb8b8;
+font-size: 20px;
+text-align: center;
+text-decoration: none;
+}
+
+a{
+color: #ce4662;
+text-decoration: none;
+}
+
+/*.telo{
+height: 62vh;
+grid-column: span 3;
+background: #afc389;
+border-color: rgb(2, 2, 2);
+}*/
