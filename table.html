@@ -26,6 +26,9 @@
                 <li class="site-navigation-item">
                     <a class="active" href="table.html">Таблица</a>
                 </li>
+                <li class="site-navigation-item"> 
+                    <a href="info.html">Информация о фильме</a>
+                  </li>
               </ul>
             </nav>
         </section>
@@ -47,7 +50,7 @@
                     <th>Бизнес</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="projectTableBody">
                 <tr>
                     <td>1</td>
                     <td>Провести анализ рынка и целевой аудитории</td>
@@ -100,11 +103,67 @@
                 </tr>
             </tbody>
         </table>
+
+        <h2>Добавить новую задачу</h2>
+        <form id="projectForm">
+            <label for="taskId">ID:</label>
+            <input type="number" id="taskId" required><br>
+
+            <label for="taskName">Задачи проекта:</label>
+            <input type="text" id="taskName" required><br>
+
+            <label for="peopleCount">Число людей (план):</label>
+            <input type="number" id="peopleCount" required><br>
+
+            <label for="duration">Продолжительность (дни):</label>
+            <input type="number" id="duration" required><br>
+
+            <label for="webDesign">Веб-дизайн:</label>
+            <input type="number" id="webDesign" required><br>
+
+            <label for="database">Базы данных:</label>
+            <input type="number" id="database" required><br>
+
+            <label for="development">Разработка:</label>
+            <input type="number" id="development" required><br>
+
+            <label for="business">Бизнес:</label>
+            <input type="number" id="business" required><br>
+
+            <button type="submit">Добавить</button>
+        </form>
     </main>
 
     <div class="item footer">
         <p>ank.aaaaaaaaa</p>
-        
     </div>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const id = document.getElementById('taskId').value;
+            const taskName = document.getElementById('taskName').value;
+            const peopleCount = document.getElementById('peopleCount').value;
+            const duration = document.getElementById('duration').value;
+            const webDesign = document.getElementById('webDesign').value;
+            const database = document.getElementById('database').value;
+            const development = document.getElementById('development').value;
+            const business = document.getElementById('business').value;
+
+            const newRow = `<tr>
+                <td>${id}</td>
+                <td>${taskName}</td>
+                <td>${peopleCount}</td>
+                <td>${duration}</td>
+                <td>${webDesign}</td>
+                <td>${database}</td>
+                <td>${development}</td>
+                <td>${business}</td>
+            </tr>`;
+
+            document.getElementById('projectTableBody').insertAdjacentHTML('beforeend', newRow);
+            this.reset(); // очищает форму после добавления
+        });
+    </script>
 </body>
 </html>
